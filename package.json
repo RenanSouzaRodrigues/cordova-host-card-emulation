@@ -1,7 +1,11 @@
 {
-  "name": "powerpush.cordova.plugins.hostcardemulation",
+  "name": "cordova-host-card-emulation",
   "version": "1.0.0",
   "description": "Cordova plugin to host card emulation",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RenanSouzaRodrigues/cordova-host-card-emulation.git"
+  },
   "cordova": {
     "id": "powerpush.cordova.plugins.hostcardemulation",
     "platforms": [
@@ -10,7 +14,10 @@
   },
   "keywords": [
     "ecosystem:cordova",
-    "cordova-android"
+    "cordova-android",
+    "host-card-emulation",
+    "hce",
+    "nfc"
   ],
   "author": "Renan Souza Rodrigues <renan.souza@powerpush.com.br>",
   "license": "MIT"
