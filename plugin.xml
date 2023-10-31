@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin
+    id="powerpush.cordova.plugins.hostcardemulation"
+    version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+>
+    <name>CordovaHostCardEmulation</name>
+
+    <js-module name="CordovaHostCardEmulation" src="www/CordovaHostCardEmulation.js">
+        <clobbers target="cordova.plugins.CordovaHostCardEmulation" />
+    </js-module>
+
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="CordovaHostCardEmulation">
+                <param name="android-package"
+                    value="powerpush.cordova.plugins.hostcardemulation.CordovaHostCardEmulation" />
+            </feature>
+        </config-file>
+
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <service 
+                android:name="powerpush.cordova.plugins.hostcardemulation.HostCardEmulationService"
+                android:exported="true"
+                android:permission="android.permission.BIND_NFC_SERVICE"
+            >
+                <intent-filter>
+                    <action android:name="android.nfc.cardemulation.action.HOST_APDU_SERVICE"/>
+                    <category android:name="android.intent.category.DEFAULT"/>
+                </intent-filter>
+
+                <meta-data 
+                    android:name="android.nfc.cardemulation.host_apdu_service"
+                    android:resource="@xml/aid_list"
+                />
+            </service>
+        </config-file>
+
+        <!-- aid is define when installing the plugin using variable AID_FILTER=F222222222 -->
+        <config-file target="res/xml/aid_list.xml" parent="/host-apdu-service/aid-group">
+            <aid-filter android:name="$AID_FILTER"/>
+        </config-file>
+
+        <source-file 
+            src="src/android/CordovaHostCardEmulation.java" 
+            target-dir="src/powerpush/cordova/plugins/hostcardemulation/CordovaHostCardEmulation" 
+        />
+
+        <source-file 
+            src="src/android/HostCardEmulationService.java" 
+            target-dir="src/powerpush/cordova/plugins/hostcardemulation/CordovaHostCardEmulation" 
+        />
+
+        <source-file 
+            src="src/android/aid_list.xml"
+            target-dir="res/xml"
+        />
+
+        <source-file 
+            src="src/android/strings.xml"
+            target-dir="res/xml"
+        />
+    
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-feature android:name="android.hardware.nfc.hce" android:required="true" />
+            <uses-permission android:name="android.permission.NFC" />
+        </config-file>
+    </platform>
+</plugin>

@@ -1,0 +1,17 @@
+{
+  "name": "powerpush.cordova.plugins.hostcardemulation",
+  "version": "1.0.0",
+  "description": "Cordova plugin to host card emulation",
+  "cordova": {
+    "id": "powerpush.cordova.plugins.hostcardemulation",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Renan Souza Rodrigues <renan.souza@powerpush.com.br>",
+  "license": "MIT"
+}
