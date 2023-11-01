@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<resources>
-    <string name="service_name">Buspay NFC</string>
-    <string name="card_title">Pagamento via tag NFC</string>
-</resources>
