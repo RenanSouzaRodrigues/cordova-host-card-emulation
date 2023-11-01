@@ -40,21 +40,24 @@
         </config-file>
 
         <config-file parent="/*" target="AndroidManifest.xml">
-            <service 
-                android:name="powerpush.cordova.plugins.hostcardemulation.HostCardEmulationService"
-                android:exported="true"
-                android:permission="android.permission.BIND_NFC_SERVICE"
-            >
-                <intent-filter>
-                    <action android:name="android.nfc.cardemulation.action.HOST_APDU_SERVICE"/>
-                    <category android:name="android.intent.category.DEFAULT"/>
-                </intent-filter>
+            <application>
+                <service 
+                    android:name="powerpush.cordova.plugins.hostcardemulation.HostCardEmulationService"
+                    android:exported="true"
+                    android:permission="android.permission.BIND_NFC_SERVICE"
+                >
+                    <intent-filter>
+                        <action android:name="android.nfc.cardemulation.action.HOST_APDU_SERVICE"/>
+                        <category android:name="android.intent.category.DEFAULT"/>
+                    </intent-filter>
 
-                <meta-data 
-                    android:name="android.nfc.cardemulation.host_apdu_service"
-                    android:resource="@xml/aid_list"
-                />
-            </service>
+                    <meta-data 
+                        android:name="android.nfc.cardemulation.host_apdu_service"
+                        android:resource="@xml/aid_list"
+                    />
+                </service>
+            </application>
+            
         </config-file>
 
         <!-- aid is define when installing the plugin using variable AID_FILTER=F222222222 -->
