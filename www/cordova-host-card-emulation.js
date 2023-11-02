@@ -1,6 +1,6 @@
 'use strict';
 
-var cordova = require('cordova');
+var cordova = require('cordova/exec');
 
 module.exports = {
     listenReaderDevice: function (successCallback, errorCallback) {
