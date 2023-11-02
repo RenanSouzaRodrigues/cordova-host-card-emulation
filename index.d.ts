@@ -20,4 +20,4 @@ declare module "cordova-host-card-emulation" {
      * @param errorCallback 
      */
     export function sendResponseToReaderDevice(response: Uint8Array, successCallback: (data: any) => void, errorCallback: (err: any) => void): void;
-};
+}
