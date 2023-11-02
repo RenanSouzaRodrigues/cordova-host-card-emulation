@@ -1,8 +1,8 @@
 {
   "name": "cordova-host-card-emulation",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Cordova plugin to host card emulation",
-  "main": "www/index.js",
+  "main": "www/cordova-host-card-emulation.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RenanSouzaRodrigues/cordova-host-card-emulation.git"
