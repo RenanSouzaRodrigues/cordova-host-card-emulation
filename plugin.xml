@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin
     id="cordova-host-card-emulation"
-    version="1.1.6"
+    version="1.1.7"
     xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
 >
@@ -11,7 +11,7 @@
 
     <name>CordovaHostCardEmulation</name>
 
-    <js-module name="CordovaHostCardEmulation" src="www/CordovaHostCardEmulation.js">
+    <js-module name="cordova-host-card-emulation" src="www/cordova-host-card-emulation.js">
         <clobbers target="cordova.plugins.CordovaHostCardEmulation" />
     </js-module>
 
