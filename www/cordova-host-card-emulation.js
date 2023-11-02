@@ -1,7 +1,5 @@
 'use strict';
 
-var cordova = require('cordova/exec');
-
 module.exports = {
     listenReaderDevice: function (successCallback, errorCallback) {
         cordova.exec(successCallback, errorCallback, "CordovaHostCardEmulation", "listenReaderDevice", []);
